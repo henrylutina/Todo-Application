@@ -1,0 +1,63 @@
+.bg-primary{
+    box-shadow: 0 0 5px black;
+    background: linear-gradient(to right, rgb(3, 10, 68), rgb(0, 89, 255)) no-repeat 0 0 / cover;
+}
+.card{
+    box-shadow: 0 0 5px black;
+}
+:root {
+    --modal-duration: 1s;
+    --modal-color: #428bca;
+  }
+
+  .modal,.deleteModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(161, 160, 160, 0.5);
+  }
+  
+  .modal-content {
+    margin: 10% auto;
+    width: 40%;
+    box-shadow: 0 0 8px rgb(46, 43, 43);
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+  }
+  
+  .modalheader {
+    color: #fff!important;
+  }
+  
+  #editinput{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .cp{
+    cursor: pointer;
+  }
+  .number{
+    display: none;
+  }
+
+  @keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+@media screen and (max-width:768px){
+  .modal-content {
+    width: 80%;
+  }
+  .modal,.deleteModal {
+    padding-top: 7rem;
+  }
+}

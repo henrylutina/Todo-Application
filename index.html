@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo Application</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header id="main-header" class="bg-primary text-white p-4 mb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 id="header-title">Todo Application</h1>
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <input type="text" class="form-control" id="filter" placeholder="Search Items...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="main" class="card card-body mb-3">
+            <h2 class="title">Add Todo Items</h2>
+            <form id="addForm" class="form-inline mb-3">
+                <input type="text" class="form-control mr-2 mt-2" id="item" required>
+                <input type="submit" class="btn btn-dark mt-2" value="Add Item">
+            </form>
+            <h2 class="title">todo Items</h2>
+            <ul id="items" class="list-group"> </ul>
+        </div>
+    </div>
+
+    <!--edit modal -->
+    <div id="my-modal" class="modal">
+        <div class="modal-content">
+            <div class="modalheader bg-primary p-3">
+                <span class="close cp">&times;</span>
+                <h2>Edit item</h2>
+            </div>
+            <div class="modal-body">
+                <p>Please type a value</p>
+                <input type="text" id="editinput">
+            </div>
+            <div class="modal-footer bg-primary">
+                <button class="btn saveBtn">Save changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!--delete modal -->
+    <div id="deleteModal" class="deleteModal">
+        <div class="modal-content">
+            <div class="modalheader bg-primary p-3">
+                <span class="close dltclose cp">&times;</span>
+                <h2>Delete item</h2>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure</p>
+            </div>
+            <div class="modal-footer bg-primary">
+                <button class="btn deleteBtn">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
